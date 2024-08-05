@@ -60,6 +60,12 @@ then
         read res # Leave on screen so the user can see the error
         exit 1
     fi
+
+    if [ -n "$INITIALIZE_TMUX_WINDOW_TITLE" ]
+    then
+        echo -n "# " >> "$NOTEFILE"
+        tmux display -p '#{window_name}' >> "$NOTEFILE"
+    fi
 fi
 
 $EDITOR $NOTEFILE
