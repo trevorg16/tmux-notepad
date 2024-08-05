@@ -50,13 +50,16 @@ then
     exit 1
 fi
 
-NOTEFILE="$DESTINATION_DIR/window_$TMUX_WINDID"
+NOTEFILE="$DESTINATION_DIR/window_$TMUX_WINDID.txt"
 
-if ! touch "$NOTEFILE"
+if ! [ -f "$NOTEFILE" ]
 then
-    echo "Failed to touch (create) file $NOTEFILE"
-    read res # Leave on screen so the user can see the error
-    exit 1
+    if ! touch "$NOTEFILE"
+    then
+        echo "Failed to touch (create) file $NOTEFILE"
+        read res # Leave on screen so the user can see the error
+        exit 1
+    fi
 fi
 
 $EDITOR $NOTEFILE
