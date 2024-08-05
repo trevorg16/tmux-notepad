@@ -13,3 +13,7 @@ This will cause the tmux-notepad window to be opened when you press tmux prefix 
 By default, tmux prefix is ^B
 
 ![tmux-notepad](assets/tmux-notepad.gif)
+
+## License
+
+This software is licensed under the [MIT license](https://opensource.org/license/mit)
