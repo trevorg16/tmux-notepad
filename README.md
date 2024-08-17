@@ -22,6 +22,8 @@ Options can be passed into tmux-notepad by modifying the display-popup command i
 | ------ | ----------- | ------- |
 | `INITIALIZE_TMUX_WINDOW_TITLE` | On creation, initialize the note with the title of the tmux window for which the note is being created | `False` if unset |
 
+Note: `-e` is not supported in older versions of tmux
+
 ## License
 
 This software is licensed under the [MIT license](https://opensource.org/license/mit)
